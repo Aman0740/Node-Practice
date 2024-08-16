@@ -1,0 +1,18 @@
+
+
+
+* EXPLANATION OF THAT CODE *
+
+
+1. **Importing the HTTP Module**: The code starts by importing the HTTP module, which is a built-in module in Node.js that allows you to create and manage web servers.
+
+2. **Creating a Request Handler Function**: A function named `database` is defined to handle incoming requests. This function will be executed whenever the server receives a request. It takes two parameters: `req` (request) and `res` (response).
+
+3. **Writing Responses**: Within the `database` function, various HTML elements are written to the response. These elements include headers (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`) and a paragraph (`<p>`). These elements are used to structure the content of the response that the server will send back to the client.
+
+4. **Ending the Response**: The response is ended with the `res.end()` method, which signals that all of the response headers and body have been sent, and the server should consider the response complete.
+
+5. **Creating the Server**: The code then creates an HTTP server using the `createServer` method, passing the `database` function as the request handler. This means that every time the server receives a request, it will use the `database` function to handle it.
+
+6. **Listening on a Port**: The server is instructed to listen on port 4400. Once the server starts listening, a message is logged to the console indicating that the server is listening on the specified port.
+

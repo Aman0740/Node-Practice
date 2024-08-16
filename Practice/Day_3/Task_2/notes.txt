@@ -1,0 +1,10 @@
+
+
+* EXPLANATION OF THAT CODE *
+
+
+1. **Directory Path Creation**: It sets up a path to a directory called "files" located in the same directory as the script itself.
+
+2. **Directory Check**: It checks if the "files" directory exists. If it doesn't, it creates the directory (including any necessary parent directories).
+
+3. **File Creation**: It then creates five text files in the "files" directory. Each file is named "hello0.txt", "hello1.txt", and so on up to "hello4.txt". Each file contains the text "This Is A Simple File".

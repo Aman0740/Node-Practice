@@ -1,0 +1,31 @@
+
+
+* COMMAND'S *
+
+--> ADD FILE COMMAND
+    [ if condition ] 
+PS C:\Users\Admin\OneDrive\Desktop\Node.Js Practice\Day_3> node index.js add  Demo_1.txt "This Is My Demo.txt File"
+file add successfully
+
+--> REMOVE FILE COMMAND
+    [ else if condition ] 
+PS C:\Users\Admin\OneDrive\Desktop\Node.Js Practice\Day_3> node index.js remove  Demo_1.txt "This Is My Demo.txt File"
+file removed successfully
+
+--> ERROR FILE COMMAND
+    [ else condition ]
+PS C:\Users\Admin\OneDrive\Desktop\Node.Js Practice\Day_3> node index.js acb  Demo_1.txt "This Is My Demo.txt File"
+Unvalid Input
+
+
+* EXPLANATION OF THAT CODE *
+
+1. **Importing the `fs` module**: The script starts by requiring the `fs` (filesystem) module, which provides an API for interacting with the file system.
+
+2. **Reading command-line arguments**: The script reads command-line arguments using `process.argv`, which returns an array containing the command-line arguments passed when the Node.js process was launched.
+
+3. **Conditional operations based on the command**:
+    - If the third command-line argument (i.e., `input[2]`) is `'add'`, the script writes data to a file. It uses `fs.writeFileSync` to write the content specified by the fifth argument (i.e., `input[4]`) to the file named in the fourth argument (i.e., `input[3]`).
+    - If the third command-line argument is `'remove'`, the script deletes the file specified by the fourth argument (i.e., `input[3]`) using `fs.unlinkSync`.
+    - If the third command-line argument is neither `'add'` nor `'remove'`, the script prints "Unvalid Input" to the console, indicating that the input command is invalid or not recognized.
+
